@@ -1,0 +1,214 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial, sans-serif;
+    background:#f4f6f9;
+    display:flex;
+    flex-direction:column;
+    min-height:100vh;
+}
+
+/* Header */
+header{
+    background:url("images/campus.jpg") center/cover no-repeat;
+    height:250px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:white;
+    font-size:38px;
+    font-weight:bold;
+    text-shadow:2px 2px 5px black;
+}
+
+/* Navigation */
+nav{
+    background:#003366;
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    padding:15px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:10px 15px;
+    font-size:18px;
+    transition:0.3s;
+}
+
+nav a:hover{
+    color:gold;
+}
+
+/* Main */
+main{
+    flex:1;
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+    padding:20px;
+}
+
+/* Sections */
+section{
+    background:white;
+    margin-bottom:25px;
+    padding:25px;
+    border-radius:15px;
+    box-shadow:0 5px 10px rgba(0,0,0,0.1);
+}
+
+section h2{
+    color:#003366;
+    margin-bottom:15px;
+}
+
+/* Images General */
+section img{
+    width:100%;
+    border-radius:15px;
+    object-fit:cover;
+}
+
+/* Add Course + Contact Layout */
+.course-box,
+.contact-box{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:40px;
+}
+
+.course-box form,
+.contact-box form{
+    flex:1;
+}
+
+.course-image,
+.contact-image{
+    flex:1;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.course-image img,
+.contact-image img{
+    width:100%;
+    max-width:500px;
+    height:400px;
+    object-fit:cover;
+    border-radius:15px;
+    box-shadow:0 5px 10px rgba(0,0,0,0.15);
+}
+
+/* Table */
+.table-container{
+    overflow-x:auto;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    background:white;
+}
+
+th,td{
+    padding:12px;
+    border:1px solid #ddd;
+    text-align:center;
+}
+
+th{
+    background:#003366;
+    color:white;
+}
+
+tr:hover{
+    background:#f1f1f1;
+}
+
+/* Form */
+form{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+}
+
+input,textarea{
+    padding:10px;
+    border:1px solid #ccc;
+    border-radius:8px;
+    width:100%;
+    font-size:16px;
+}
+
+textarea{
+    resize:vertical;
+}
+
+button{
+    padding:12px;
+    background:#003366;
+    color:white;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+    transition:0.3s;
+    font-size:16px;
+}
+
+button:hover{
+    background:#0055aa;
+}
+
+/* Footer */
+footer{
+    background:#003366;
+    color:white;
+    text-align:center;
+    padding:20px;
+    margin-top:auto;
+}
+
+/* Responsive */
+@media(max-width:768px){
+
+    header{
+        font-size:28px;
+        height:180px;
+        text-align:center;
+        padding:10px;
+    }
+
+    nav{
+        flex-direction:column;
+        align-items:center;
+    }
+
+    nav a{
+        margin:8px 0;
+    }
+
+    .course-box,
+    .contact-box{
+        flex-direction:column;
+    }
+
+    .course-image img,
+    .contact-image img{
+        height:250px;
+        max-width:100%;
+    }
+
+    main{
+        width:95%;
+        padding:10px;
+    }
+}
